@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char sLtr = 123;
+	char sLtr = 122;
 	int cnt;
 
 	for (cnt = 0; cnt < 26; cnt++)
