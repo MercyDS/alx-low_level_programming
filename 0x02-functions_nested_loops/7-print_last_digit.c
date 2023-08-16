@@ -18,5 +18,4 @@ int print_last_digit(int n)
 
 	putchar(l + '0');
 	return (l);
-	}
 }
