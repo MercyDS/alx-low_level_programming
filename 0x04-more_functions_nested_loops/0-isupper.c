@@ -1,22 +1,15 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- *_isupper - check for uppercase
+ *_isupper - checks for uppercase
  *
- *Return: (1) for uppercase otherwise (0)
+ *Return: (1)if uppercase otherwise (0)
+ *
  */
 
 int _isupper(int c)
 {
-	c;
-
-	if (c >= 64 && c <= 90)
-	{
+	if (c >= 'A' && c <= 'Z')
 		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
