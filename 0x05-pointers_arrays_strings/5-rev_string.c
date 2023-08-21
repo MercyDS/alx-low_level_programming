@@ -12,9 +12,11 @@ void rev_string(char *s)
 	if (s == NULL)
 		return;
 
-	int length = 0;
+	int length;
 	char *start = s;
 	char *end = s;
+
+	length = 0;
 
 	while (*end != '\0')
 	{
