@@ -12,13 +12,13 @@ void rev_string(char *s)
 {
 	int n = 0;
 	char *same = s;
-	char store[strlen(s) + 1];
+	char str[strlen(s) + 1];
 
-	while (n < strlen(s))
+	while (n < (int)strlen(s))
 	{
-		store[n] = same[(strlen(s) - 1) - n];
+		str[n] = same[(strlen(s) - 1) - n];
 		n++;
 	}
-	store[n] = '\0';
+	str[n] = '\0';
 	strcpy(s, store);
 }
