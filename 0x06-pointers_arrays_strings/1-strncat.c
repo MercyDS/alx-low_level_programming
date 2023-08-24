@@ -1,24 +1,30 @@
-#include <string.h>
 #include "main.h"
-
 /**
-* _strcmp - copy string 2 to string 1
+* _strncat - copy the string 2 to string 1
 *
-* @s1: First string
-* @s2: second string
-* Return: 0 (same) or an integer (different)
+* @dest: first string (pointer to char)
+* @src: second string (pointer to char)
+* @n: nummber of string to be copied
+* Return: (dest)
 */
-int _strcmp(char *s1, char *s2)
+
+char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
+	int i;
+	int j;
 
-	for (i = 0; i < strlen(s1); i++)
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-		{
-			return ((int)(s1[i] - s2[i]));
-		}
+		i++;
 	}
-
-	return (0);
+	j = 0;
+	while (j < n && src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = src[i];
+	return (dest);
 }
