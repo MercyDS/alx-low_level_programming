@@ -1,23 +1,25 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
-* _strncpy - fill the first n spaces with string 2
+* _strncpy - copy string 2 to string 1
 *
-* @dest: first string
-* @src: second string
-* @n: the number of spaces of dest src is copied to
+* @dest: first string (pointer to char)
+* @src: second string (pointer to char)
+* @n: number of spaces of string 2 to copy
 * Return: (dest)
 */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
-	int j;
+	int s;
 
-	for (i = 0; i < n; i++)
+	for (s = 0; s < n && src[s] != '\0'; s++)
 	{
-		dest[i] = src[i];
+		dest[s] = src[s];
 	}
 
+	for (; s < n; s++)
+	{
+		dest[s] = '\0';
+	}
 	return (dest);
 }
