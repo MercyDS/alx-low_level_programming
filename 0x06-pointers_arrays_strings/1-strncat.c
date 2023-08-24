@@ -1,4 +1,5 @@
 #include <string.h>
+#include "main.h"
 
 /**
 * _strcmp - copy string 2 to string 1
