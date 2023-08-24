@@ -1,31 +1,23 @@
-#include "main"
+#include <string.h>
 
 /**
-* _strncat - copies string 2 to the first n spaces of string 1
+* _strcmp - copy string 2 to string 1
 *
-* @dest: first string
-* @src: second string
-* @n: n spaces string 2 is allowed to copy
-* Return: (dest)
+* @s1: First string
+* @s2: second string
+* Return: 0 (same) or an integer (different)
 */
-
-char *_strncat(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
-	int j = 0;
 
-	while (dest[i] != '\0')
+	for (i = 0; i < strlen(s1); i++)
 	{
-		i++;
+		if (s1[i] != s2[i])
+		{
+			return ((int)(s1[i] - s2[i]));
+		}
 	}
 
-	while (j < n && src[j] != '\0')
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
-	}
-
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }
