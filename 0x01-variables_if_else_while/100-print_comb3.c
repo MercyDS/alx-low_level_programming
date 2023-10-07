@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
-*main: print out all the combination of two digits
+*main - print out all the combination of two digits
 *
-*return: always 0 (success)
+*Return: always 0 (success)
 */
 
 int main(void)
